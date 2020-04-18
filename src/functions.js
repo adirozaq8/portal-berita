@@ -4,13 +4,16 @@ export const list_berita = (url, startIdx=0, endIdx=0) => {
     .then(response => response.json())
     .then(data => {
       let filler = ""
+      if (!data.articles.length){
+        filler = `<h4 class="mt-3 mb-1 text-dark">Berita tidak ditemukan satupun</h4>`
+      }
       for (let i = startIdx; i < (endIdx || data.articles.length); i++){
         data.articles[i].title = data.articles[i].title.split("- ")
         const length = data.articles[i].title.length
         filler += `
         <li class="media mb-2 align-items-center list-berita">
           <a href="${data.articles[i].url}" class="text-decoration-none">
-            <img src="${data.articles[i].urlToImage}" class="mr-3 cover" style="height: 150px">
+            <img src="${data.articles[i].urlToImage}" class="mr-3 cover">
           </a>
           <div class="media-body">
             <a href="${data.articles[i].url}" class="text-decoration-none">
@@ -21,7 +24,11 @@ export const list_berita = (url, startIdx=0, endIdx=0) => {
         </li>
         `
       }
-      berita_terbaru.innerHTML = filler
+      if(berita_terbaru.innerHTML.indexOf("<li") != -1){
+        berita_terbaru.innerHTML += filler
+      } else {
+        berita_terbaru.innerHTML = filler
+      }
     })
 }
 
@@ -84,7 +91,7 @@ export const headline = (url, startIdx=0, endIdx=0) => {
       }
       filler += `</ol><div class="carousel-inner">`
       for (let i = startIdx; i < 5; i++){
-        data.articles[i].title = data.articles[i].title.split("-")[0]
+        data.articles[i].title = data.articles[i].title.split("- ")[0]
         if(i == 0){
           filler += `<div class="carousel-item active">`
         } else {
@@ -116,7 +123,7 @@ export const headline = (url, startIdx=0, endIdx=0) => {
 
       filler = ""
       for (let i = 5; i < (endIdx || 10); i++){
-        data.articles[i].title = data.articles[i].title.split("-")[0]
+        data.articles[i].title = data.articles[i].title.split("- ")[0]
         filler += `
         <div class="m-0">
           <div class="row no-gutters list-berita">
@@ -163,4 +170,18 @@ export const konversi_kurs = url => {
         usd.value = idr.value * data.rates.USD
       })
     })
+}
+
+export const getParam = () => {
+  return window.location.search
+}
+
+export const load_berita_lagi = (fungsi_list_berita, url, start=20) =>{
+  let counter = start
+  window.onscroll = () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      fungsi_list_berita(url, counter, counter+10)
+      counter += 10
+    }
+  };
 }

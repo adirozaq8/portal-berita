@@ -1,7 +1,7 @@
 .cover {
   object-fit: cover;
-  width: 240px;
-  height: 150px;
+  width: 120px;
+  height: 75px;
 }
 
 .carousel-img {
@@ -17,4 +17,39 @@
 
 a:hover, a:focus { 
   text-decoration: none !important;
+}
+
+.display-1 {
+  font-size: 4rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .cover {
+    width: 240px;
+    height: 150px;
+  }
+
+  .display-1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .display-1 {
+    font-size: 5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .display-1 {
+    font-size: 6rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }
