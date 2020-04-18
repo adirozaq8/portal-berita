@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+	.cover {
+		object-fit: cover;
+		width: 240px;
+		height: 150px;
+	}
+
+	.carousel-img {
+		object-fit: cover;
+		width: 100%;
+		height: 400px;
+	}
+
+	a:hover, a:focus { text-decoration: none !important;}
+	</style>
+	<title>Fokus COVID-19 | Portal Berita</title>
+</head>
+<body>
+	<top-bar></top-bar>
+  
+  <div class="container">
+    <update-covid-bar></update-covid-bar>
+
+    <!-- Penjelasan Covid-19 -->
+    <div class="row">
+      <div class="col-8">
+        <h3>Penjelasan Singkat Covid-19</h3>
+        <p>
+          Penyakit koronavirus 2019 (bahasa Inggris: coronavirus disease 2019, disingkat COVID-19) adalah penyakit 
+          menular yang disebabkan oleh SARS-CoV-2, salah satu jenis koronavirus. Penyakit ini mengakibatkan pandemi 
+          koronavirus 2019–2020. Penderita COVID-19 dapat mengalami demam, batuk kering, dan kesulitan bernapas. 
+          Sakit tenggorokan, pilek, atau bersin-bersin lebih jarang ditemukan. Pada penderita yang paling rentan, penyakit ini 
+          dapat berujung pada pneumonia dan kegagalan multiorgan.
+        </p>
+        <p>
+          Infeksi menyebar dari satu orang ke orang lain melalui percikan (droplet) dari saluran pernapasan yang sering 
+          dihasilkan saat batuk atau bersin. Waktu dari paparan virus hingga timbulnya gejala klinis berkisar 
+          antara 1–14 hari dengan rata-rata 5 hari. Metode standar diagnosis adalah uji reaksi berantai 
+          polimerase transkripsi-balik (rRT-PCR) dari usap nasofaring atau sampel dahak dengan hasil dalam beberapa jam 
+          hingga 2 hari. Pemeriksaan antibodi dari sampel serum darah juga dapat digunakan dengan hasil dalam beberapa hari. 
+          Infeksi juga dapat didiagnosis dari kombinasi gejala, faktor risiko, dan pemindaian tomografi terkomputasi pada dada 
+          yang menunjukkan gejala pneumonia.
+          <span class="font-weight-bolder">(wikipedia.org)</span>
+        </p>
+        
+
+        <h5>Kapan harus ke dokter</h5>
+        <p>
+          Segera lakukan isolasi mandiri bila Anda mengalami gejala infeksi virus Corona (COVID-19) seperti yang disebutkan di 
+          atas, terutama jika gejala muncul 2 minggu setelah kontak dengan penderita COVID-19 atau berada di daerah yang memiliki 
+          kasus COVID-19. Setelah itu, hubungi hotline COVID-19 di 119 Ext. 9 untuk mendapatkan pengarahan lebih lanjut.
+        </p>
+        <p>
+          Bila Anda mungkin terpapar virus Corona namun tidak mengalami gejala apa pun, Anda tidak perlu memeriksakan diri ke rumah 
+          sakit, cukup tinggal di rumah selama 14 hari dan membatasi kontak dengan orang lain.
+        </p>
+        <p>
+          Bila Anda memerlukan pemeriksaan langsung oleh dokter, jangan langsung ke rumah sakit karena itu akan meningkatkan risiko 
+          Anda tertular atau menularkan virus Corona ke orang lain. 
+        </p>
+        <h5>Pencegahan Virus Corona (Covid-19)</h5>
+        <p>
+          Sampai saat ini, belum ada vaksin untuk mencegah infeksi virus Corona atau COVID-19. Oleh sebab itu, cara pencegahan 
+          yang terbaik adalah dengan menghindari faktor-faktor yang bisa menyebabkan Anda terinfeksi virus ini, yaitu:
+        </p>
+        <p>
+          <ul>
+            <li>
+              Terapkan physical distancing, yaitu menjaga jarak minimal 1 meter dari orang lain, dan jangan dulu ke luar rumah 
+              kecuali ada keperluan mendesak.
+            </li>
+            <li>
+              Gunakan masker saat beraktivitas di tempat umum atau keramaian.
+            </li>
+            <li>
+              Rutin mencuci tangan dengan air dan sabun atau hand sanitizer yang mengandung alkohol minimal 60% setelah 
+              beraktivitas di luar rumah atau di tempat umum.
+            </li>
+            <li>
+              Tingkatkan daya tahan tubuh dengan pola hidup sehat.
+            </li>
+            <li>
+              Jangan menyentuh mata, mulut, dan hidung sebelum mencuci tangan.
+            </li>
+            <li>
+              Hindari kontak dengan penderita atau orang yang dicurigai menderita COVID-19.
+            </li>
+            <li>
+              Tutup mulut dan hidung dengan tisu saat batuk atau bersin, kemudian buang tisu ke tempat sampah.
+            </li>
+            <li>
+              Hindari berdekatan dengan orang yang sedang sakit demam, batuk, atau pilek.
+            </li>
+            <li>
+              Jaga kebersihan benda yang sering disentuh dan kebersihan lingkungan, termasuk kebersihan rumah.
+            </li>
+          </ul>
+          <span class="font-weight-bolder">(alodokter.com)</span>
+        </p>
+      </div>
+      <div class="col-4">
+        <h4 class="card-header mb-2">Berita Covid-19</h4>
+        <berita-side></berita-side>
+      </div>
+    </div>
+    
+  </div>
+  
+	<script src="./script/component/top-bar.js"></script>
+  <script src="./script/component/update-covid-bar.js"></script>
+  <script src="./script/component/berita-side.js"></script>
+  <script src="./functions.js"></script>
+	<script src="./fokus-covid.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
