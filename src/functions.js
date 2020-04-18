@@ -99,7 +99,7 @@ export const headline = (url, startIdx=0, endIdx=0) => {
         }
         filler += `
         <img src="${data.articles[i].urlToImage}" class="d-block mx-auto carousel-img" alt="${data.articles[i].title}" style="height: 400px;">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
             <div class="card text-white bg-light mb-3">
               <a href="${data.articles[i].url}" class="card-body text-dark">
                 <h5 class="card-title">${data.articles[i].title}</h5>
