@@ -1,6 +1,7 @@
 import {list_berita, getParam} from './functions'
 import './component/top-bar'
 import './component/berita-terbaru'
+import './component/footer-bar'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/style.css'
