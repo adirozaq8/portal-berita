@@ -8,7 +8,7 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/style.css'
 
-const url_headline_main = "https://newsapi.org/v2/top-headlines?country=id&pageSize=50&apiKey=f97b09fa0aed4a9e91547d77f620f45b"
+const url_headline_main = "http://newsapi.org/v2/top-headlines?country=id&pageSize=50&apiKey=f97b09fa0aed4a9e91547d77f620f45b"
 
 update_covid()
 headline(url_headline_main, 0, 10)
