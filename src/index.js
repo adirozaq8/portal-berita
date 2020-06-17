@@ -13,4 +13,4 @@ const url_headline_main = "https://newsapi.org/v2/top-headlines?country=id&pageS
 update_covid()
 headline(url_headline_main, 0, 10)
 list_berita(url_headline_main, 10)
-load_berita_lagi(list_berita, url, 10)
+load_berita_lagi(list_berita, url_headline_main, 10)

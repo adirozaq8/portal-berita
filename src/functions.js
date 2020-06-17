@@ -61,16 +61,16 @@ export const list_berita_side = url => {
 }
 
 export const update_covid = () => {
-  const url_update_covid = "https://api.kawalcorona.com/indonesia/"
+  const url_update_covid = "https://indonesia-covid-19.mathdro.id/api"
   const update_covid_positif = document.querySelector("update-covid-bar section div div div h1.text-warning")
   const update_covid_sembuh = document.querySelector("update-covid-bar section div div div h1.text-success")
   const update_covid_meninggal = document.querySelector("update-covid-bar section div div div h1.text-danger")
   fetch(url_update_covid)
     .then(response => response.json())
     .then(data => {
-      update_covid_positif.innerHTML = data[0].positif
-      update_covid_sembuh.innerHTML = data[0].sembuh
-      update_covid_meninggal.innerHTML = data[0].meninggal
+      update_covid_positif.innerHTML = data.perawatan
+      update_covid_sembuh.innerHTML = data.sembuh
+      update_covid_meninggal.innerHTML = data.meninggal
     })
 }
 
