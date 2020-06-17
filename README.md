@@ -1,5 +1,9 @@
 # Portal Berita
 
-This is a news app that give you a new information in Bahasa Indonesia. You can check the app with this link
+This is a news app that give you a new information in Bahasa Indonesia.
 
-https://adirozaq8.github.io/portal-berita/
+Stacks:
+* HTML
+* CSS
+* Javascript with Web Components
+* Bootstrap

@@ -8,6 +8,6 @@ import './styles/style.css'
 
 const param = getParam()
 
-const url = "http://newsapi.org/v2/top-headlines" + param + "&country=id&pageSize=20&apiKey=f97b09fa0aed4a9e91547d77f620f45b"
+const url = "https://newsapi.org/v2/top-headlines" + param + "&country=id&pageSize=20&apiKey=f97b09fa0aed4a9e91547d77f620f45b"
 
 list_berita(url)
